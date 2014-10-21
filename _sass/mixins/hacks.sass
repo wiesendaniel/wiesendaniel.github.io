@@ -1,0 +1,11 @@
+// Some well known CSS Hacks as SASS Mixins
+
+@mixin clearfix()
+  &:before,
+  &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+

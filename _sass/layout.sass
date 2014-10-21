@@ -1,0 +1,73 @@
+@import 'config/colors'
+@import 'config/variables'
+@import 'mixins/prefixing'
+@import 'mixins/responsive'
+
+html, body
+  height: 100%
+
+body
+  // Awesome CSS3 Background-Pattern
+  background-color: $color-4
+  background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1))
+  background-size: 70px 120px
+  background-attachment: fixed
+
+  .site-header
+    //position: relative
+
+    width: $pageWidth
+    max-width: $pageMaxwidth
+    +respond-to(small-screen)
+      width: 100%
+
+    margin: 0 auto
+    margin-top: 100px
+
+
+
+    @include box-sizing(border-box)
+
+
+  main
+    position: relative
+    z-index: 1000
+
+    width: $pageWidth
+    max-width: $pageMaxwidth
+    +respond-to(small-screen)
+      width: 100%
+
+    height: auto !important
+    min-height: 100%
+
+    margin: 0 auto
+    margin-bottom: $footerHeight
+    padding: 2em
+    //padding-bottom: -$footerHeight
+
+    background-color: $color-1
+    @include box-shadow(0, 15px, 15px, #333, false)
+
+
+
+  footer
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 999
+
+    width: $pageWidth
+    max-width: $pageMaxwidth
+    +respond-to(small-screen)
+      width: 100%
+
+    height: $footerHeight
+
+    margin: 0 auto
+    padding: 2em
+
+    background-color: rgb(200, 200, 200)
+    background-color: rgba(200, 200, 200, 0.75)
+

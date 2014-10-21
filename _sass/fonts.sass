@@ -1,0 +1,85 @@
+// Color Definition
+@import 'config/colors'
+
+// Variable Definition
+@import 'config/variables'
+
+// Element Definition
+body 
+  font-family: $font-main
+  font-size: $baseFontsize
+  font-weight: 400
+  font-style: normal
+
+  line-height: 25px
+
+  h1, h2, h3, h4, h5, h6
+    font-family: $font-heading
+    font-size: $baseFontsize
+    margin-bottom: $baseFontsize *1.5
+
+  h1
+    font-size: $baseFontsize * 1.5
+    line-height: $baseFontsize * 1.5
+
+  h2
+    font-size: $baseFontsize * 1.375
+    line-height: $baseFontsize * 1.375 * 1.0909
+
+  h3
+    font-size: $baseFontsize * 1.25
+    line-height: $baseFontsize * 1.25 * 1.2
+
+  h4
+    font-size: $baseFontsize * 1.125
+    line-height: $baseFontsize * 1.125 * 1.333
+
+  h5, h6
+    font-size: $baseFontsize
+    line-height: $baseFontsize * 1.5
+
+  a
+    color: $color-a
+
+    &:hover, &:focus
+      color: $color-a-hover
+
+    &:visited
+      color: $color-a-visited
+
+  p
+    margin-bottom: $baseFontsize * 1.5
+
+    &:first-of-type
+      font-size: $baseFontsize * 1.125
+      line-height:  $baseFontsize * 1.125 * 1.333
+
+  p+p
+    text-indent: 1em
+    margin-top: - $baseFontsize * 1.5
+
+
+
+  code
+    font-family: $font-code
+    font-size: $baseFontsize
+    margin-bottom: $baseFontsize * 1.5
+
+  blockquote
+    font-size: $baseFontsize
+    line-height: 37px
+    margin-bottom: 25px
+
+  ul, ol
+    margin-bottom: $baseFontsize * 1.5
+
+  ul
+    list-style: square outside
+
+
+  ul ul, ol ol
+    margin: 0 0 0 60px
+
+
+
+

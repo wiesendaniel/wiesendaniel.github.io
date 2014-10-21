@@ -6,7 +6,30 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <!-- CSS -->
 
-</head>
+    <!-- Default Stylesheet -->
+    <!--[if !IE]><!--><link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"><![endif]-->
+
+    <!-- IE Fallbacks -->
+    <!--[if lte IE 6]><link rel="stylesheet" href="{{ "/css/ie6.css" | prepend: site.baseurl }}"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="{{ "/css/ie7.css" | prepend: site.baseurl }}"><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}"><![endif]-->
+    <!--[if IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}"><![endif]-->
+
+    <!-- Print Stylesheet-->
+    <link rel="stylesheet" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46667587-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+    <!--[if lte IE 8]><script src="js/lib/modernizer.min.js"></script><![endif]-->
+   </head>
