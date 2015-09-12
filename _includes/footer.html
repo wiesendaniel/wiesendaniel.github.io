@@ -1,56 +1,42 @@
-<footer class="site-footer">
-
-  <div class="wrap">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-1 column">
-      <ul>
-        <li>{{ site.title }}</li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col-2 column">
-      <ul>
-        {% if site.github_username %}<li>
-          <a href="https://github.com/{{ site.github_username }}">
-            <span class="icon github">
-            </span>
-            <span class="username">{{ site.github_username }}</span>
-          </a>
-        </li>{% endif %}
-        {% if site.twitter_username %}<li>
-          <a href="https://twitter.com/{{ site.twitter_username }}">
-{{ site.twitter_username }}
-          </a>
-        </li>{% endif %}
-      </ul>
-    </div>
-
-    <div class="footer-col-3 column">
-      <p class="text">{{ site.description }}</p>
-    </div>
-
+<div class="footer clearfix">
+  <div class="col-md-6">
+    {{ site.footer_left }}
   </div>
+  <div class="col-md-6">
+    {{ site.footer_right }}
+  </div>
+</div>
 
-</footer>
-
-<!-- JS -->
-<!--<script data-main="js/main" src="js/lib/require.js"></script>-->
-<script src="{{ "/js/lib/Please.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/lib/prism.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
-
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.mmenu.min.all.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
-    <!-- // http://www.browser-update.org/-->
-    var $buoop = {};
-    $buoop.ol = window.onload;
-    window.onload=function(){
-        try {if ($buoop.ol) $buoop.ol();}catch (e) {}
-        var e = document.createElement("script");
-        e.setAttribute("type", "text/javascript");
-        e.setAttribute("src", "//browser-update.org/update.js");
-        document.body.appendChild(e);
-    }
+   $(document).ready(function() {
+      $("#my-menu").mmenu().on( "closed.mm", function() {
+            $(".menu-button").show();
+         });
+      $(".menu-button").click(function() {
+        $(".menu-button").hide();
+        $("#my-menu").trigger("open.mm");
+      });
+   });
 </script>
+
+{% if site.google_analytics %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+          _gaq.push(['_trackPageview']);
+  (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+{% endif %}

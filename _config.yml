@@ -1,33 +1,32 @@
 # Site settings
-title: Daniel Wiesendorf
-email: daniel@wiesendorf.net
-description: "A Webdevs and Opensource Lovers Webiste to show off skills and opinion"
+title: "Daniel Wiesendorf"
+email: daniel.wiesendorf@gogolemail.com
+description: "A Webdevs Website - Portfolio - Blog"
 baseurl: ""
-url: "http://wiesendorf.net"
+url: "http://www.wiesendorf.net/"
+title_description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+title_image: "https://www.gravatar.com/avatar/3576cf3e66fab6d9f816046e040252ea?s=500&d=mm"
+google_analytics: "UA-46667587-1"
+disqus_account: wiesendaniel
+github_repository: https://github.com/jacobtomlinson/carte-noire
+addthis_id: ra-55f3e652cba55cc8
+post_limit: 5
 
-#Socialmedia settings
-github_username:    "wiesendaniel"
-twitter_username:   "wiesendaniel"
-facebook_username:  "wiesendorf"
-gplus_username:     "wiesendaniel"
+# Social usernames/URLs
+twitter_username: wiesendaniel
+github_username:  wiesendaniel
+#linkedin_link:
+xing_link: https://www.xing.com/profile/Daniel_Wiesendorf3
+google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
+stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+
+# Footer
+#footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Daniel Wiesendorf</a>"
+#footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
-markdown: kramdown # or rdiscount
-markdown_ext:  markdown, mkdown, mkdn, mkd, md
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 permalink: pretty
-
-
-# Asset settings
-sass:
-    sass_dir: _sass
-    style:   :compressed
-
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     ["README.md", "CNAME"]
-
-timezone: Europe/Berlin
-encoding: utf-8
+exclude: [vendor]
